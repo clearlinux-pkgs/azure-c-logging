@@ -7,7 +7,7 @@
 #
 Name     : azure-c-logging
 Version  : a815415ea2c48e5f0d9c58b58228264837c8beea
-Release  : 1
+Release  : 2
 URL      : https://github.com/Azure/c-logging/archive/a815415ea2c48e5f0d9c58b58228264837c8beea/azure-c-logging-a815415ea2c48e5f0d9c58b58228264837c8beea.tar.gz
 Source0  : https://github.com/Azure/c-logging/archive/a815415ea2c48e5f0d9c58b58228264837c8beea/azure-c-logging-a815415ea2c48e5f0d9c58b58228264837c8beea.tar.gz
 Summary  : No detailed summary available
@@ -55,7 +55,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1726272541
+export SOURCE_DATE_EPOCH=1726502609
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -99,7 +99,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1726272541
+export SOURCE_DATE_EPOCH=1726502609
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/azure-c-logging
 cp %{_builddir}/c-logging-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/azure-c-logging/5c8d40f5ba076a94ba059fd1c53ad3b1e261e164 || :
@@ -115,25 +115,25 @@ popd
 %files dev
 %defattr(-,root,root,-)
 /usr/include/c_logging/consolelogger.h
+/usr/include/c_logging/log_context.h
+/usr/include/c_logging/log_context_property_basic_types.h
+/usr/include/c_logging/log_context_property_bool_type.h
+/usr/include/c_logging/log_context_property_to_string.h
+/usr/include/c_logging/log_context_property_type.h
+/usr/include/c_logging/log_context_property_type_ascii_char_ptr.h
+/usr/include/c_logging/log_context_property_type_if.h
+/usr/include/c_logging/log_context_property_type_struct.h
+/usr/include/c_logging/log_context_property_type_wchar_t_ptr.h
+/usr/include/c_logging/log_context_property_value_pair.h
+/usr/include/c_logging/log_errno.h
+/usr/include/c_logging/log_internal_error.h
+/usr/include/c_logging/log_level.h
+/usr/include/c_logging/log_sink_callback.h
+/usr/include/c_logging/log_sink_console.h
+/usr/include/c_logging/log_sink_if.h
+/usr/include/c_logging/logger.h
+/usr/include/c_logging/logger_v1_v2.h
 /usr/include/c_logging/logging_stacktrace.h
-/usr/include/c_logging/v2/c_logging/log_context.h
-/usr/include/c_logging/v2/c_logging/log_context_property_basic_types.h
-/usr/include/c_logging/v2/c_logging/log_context_property_bool_type.h
-/usr/include/c_logging/v2/c_logging/log_context_property_to_string.h
-/usr/include/c_logging/v2/c_logging/log_context_property_type.h
-/usr/include/c_logging/v2/c_logging/log_context_property_type_ascii_char_ptr.h
-/usr/include/c_logging/v2/c_logging/log_context_property_type_if.h
-/usr/include/c_logging/v2/c_logging/log_context_property_type_struct.h
-/usr/include/c_logging/v2/c_logging/log_context_property_type_wchar_t_ptr.h
-/usr/include/c_logging/v2/c_logging/log_context_property_value_pair.h
-/usr/include/c_logging/v2/c_logging/log_errno.h
-/usr/include/c_logging/v2/c_logging/log_internal_error.h
-/usr/include/c_logging/v2/c_logging/log_level.h
-/usr/include/c_logging/v2/c_logging/log_sink_callback.h
-/usr/include/c_logging/v2/c_logging/log_sink_console.h
-/usr/include/c_logging/v2/c_logging/log_sink_if.h
-/usr/include/c_logging/v2/c_logging/logger.h
-/usr/include/c_logging/v2/c_logging/logger_v1_v2.h
 /usr/include/c_logging/xlogging.h
 
 %files license

@@ -32,7 +32,7 @@ index abce964754f6..8fe51d6741bb 100644
  target_link_libraries(c_logging_v2 c_logging_v2_core)
  
 -install_library_with_prefix(c_logging_v2 c_logging/v2/c_logging ${c_logging_v2_h_files})
-+install(FILES ${c_logging_v2_h_files} DESTINATION include/c_logging/v2/c_logging)
++install(FILES ${c_logging_v2_h_files} DESTINATION include/c_logging)
  
  if((CMAKE_GENERATOR MATCHES "Visual Studio") AND (${run_traceability}))
      #add traceability custom target
